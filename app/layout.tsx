@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import {Nunito } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
+
+import {
+  ClerkProvider,
+} from '@clerk/nextjs'
 
 
 const font = Nunito({
@@ -20,11 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <ClerkProvider>
       <body
         className={`${font.className}`}
       >
+        <Toaster/>
         {children}
       </body>
+      </ClerkProvider>
     </html>
   );
 }
