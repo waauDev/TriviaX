@@ -6,6 +6,7 @@ import "./globals.css";
 import {
   ClerkProvider,
 } from '@clerk/nextjs'
+import { ExitModal } from "@/components/modal/exit-modal";
 
 
 const font = Nunito({
@@ -30,6 +31,7 @@ export default function RootLayout({
         className={`${font.className}`}
       >
         <Toaster/>
+        <ExitModal />
         {children}
       </body>
       </ClerkProvider>
