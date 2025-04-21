@@ -81,9 +81,18 @@ const main = async()=>{
         {
             id:2,
             lessonId:1,
-            type:"SELECT",
+            type:"ASSIST",
             order:1,
             question:"¿Las vacas se preguntan por qué los humanos beben su leche? 🐄🥛🤨"
+
+
+        },
+        {
+            id:3,
+            lessonId:1,
+            type:"SELECT",
+            order:1,
+            question:"2X4"
 
 
         }
@@ -91,27 +100,76 @@ const main = async()=>{
 
     await db.insert(schema.challengeOptions).values([
         {
-            id:1,
+            
             challengeId:1,
-            imageSrc:"/man.svg",
+            imageSrc:"/boy.svg",
             correct:true,
             text:"el Hombre",
             audioSrc:"/es_man.mp3"
         },
         {
-            id:2,
+            
             challengeId:1,
-            imageSrc:"/woman.svg",
+            imageSrc:"/girl.svg",
             correct:false,
             text:"la mujer",
             audioSrc:"/es_woman.mp3"
         },
         {
-            id:3,
+            
             challengeId:1,
-            imageSrc:"/robot.svg",
+            imageSrc:"/zombie.svg",
             correct:false,
             text:"el robot",
+            audioSrc:"/es_robot.mp3"
+        },
+        {
+            
+            challengeId:2,
+            correct:true,
+            text:"el Hombre",
+            audioSrc:"/es_man.mp3"
+        },
+        {
+            
+            challengeId:2,
+            correct:false,
+            text:"la mujer",
+            audioSrc:"/es_woman.mp3"
+        },
+        {
+            
+            challengeId:2,
+            correct:false,
+            text:"el robot",
+            audioSrc:"/es_robot.mp3"
+        },
+        {
+            
+            challengeId:3,
+            correct:true,
+            text:"9",
+            audioSrc:"/es_man.mp3"
+        },
+        {
+            
+            challengeId:3,
+            correct:false,
+            text:"40",
+            audioSrc:"/es_woman.mp3"
+        },
+        {
+            
+            challengeId:3,
+            correct:false,
+            text:"80",
+            audioSrc:"/es_robot.mp3"
+        },
+        {
+            
+            challengeId:3,
+            correct:true,
+            text:"No se",
             audioSrc:"/es_robot.mp3"
         },
     
