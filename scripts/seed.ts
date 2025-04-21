@@ -95,6 +95,14 @@ const main = async()=>{
             question:"2X4"
 
 
+        },
+        {
+            id:4,
+            lessonId:2,
+            type:"SELECT",
+            order:1,
+            question:"Si tienes 5 panes y te comes 3, ¿qué tienes?"
+
         }
     ])
 
@@ -172,6 +180,31 @@ const main = async()=>{
             text:"No se",
             audioSrc:"/es_robot.mp3"
         },
+        {
+            
+            challengeId:4,
+            correct:false,
+            text:"Hambre aún 🍞😩"
+        },
+        {
+            
+            challengeId:4,
+            correct:false,
+            text:"Problemas de autocontrol 🤤"
+        },
+        {
+            
+            challengeId:4,
+            correct:true,
+            text:"2 panes 🍞🍞"
+        },
+        {
+            
+            challengeId:4,
+            correct:false,
+            text:"Ganas de una siesta 😴"
+        },
+        
     
     ])
 
