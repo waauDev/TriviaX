@@ -7,6 +7,8 @@ import {
   ClerkProvider,
 } from '@clerk/nextjs'
 import { ExitModal } from "@/components/modal/exit-modal";
+import { HeartsModal } from "@/components/modal/hearts-modal";
+import { PracticeModal } from "@/components/modal/practice-modal";
 
 
 const font = Nunito({
@@ -25,13 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <ClerkProvider>
       <body
         className={`${font.className}`}
       >
         <Toaster/>
         <ExitModal />
+        <HeartsModal />
+        <PracticeModal />
         {children}
       </body>
       </ClerkProvider>
