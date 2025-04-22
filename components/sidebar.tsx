@@ -30,7 +30,7 @@ const Sidebar =({className}:Props)=>{
             <SidebarItem label="Puntuación"
             href="/leaderboard"
             iconSrc="/leaderboard.svg"></SidebarItem>
-            <SidebarItem label="Preguntas"
+            <SidebarItem label="Progreso"
             href="/quests"
             iconSrc="/quests.svg"></SidebarItem>
             <SidebarItem label="Tienda"

@@ -5,6 +5,8 @@ import { Header } from "./header";
 import { UserProgress } from "@/components/user-progress";
 import { getCourseProgress, getlessonPercentage, getUnits, getUserProgress } from "@/db/query";
 import { Unit } from "./unit";
+import { Promo } from "@/components/promo";
+import { Quests } from "@/components/ui/quests";
 
 
 const LearnPage = async() => {
@@ -47,6 +49,8 @@ const LearnPage = async() => {
           hasActiveSubscription={false}>
 
         </UserProgress>
+        <Promo />
+        <Quests/>
       </StickyWrapper>
       <FeedWrapper>
           <Header title={userProgress?.activeCourse?.title}/>

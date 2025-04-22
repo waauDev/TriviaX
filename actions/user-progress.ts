@@ -7,10 +7,10 @@ import db from "@/db/drizzle";
 import { revalidatePath } from "next/cache";
 import { error } from "console";
 import { and, eq } from "drizzle-orm";
+import { POINTS_REFILL } from "@/const";
 
 
 
-const POINTS_REFILL = 5;
 
 export const upsertUserProgress = async(courseId:number)=>{
     const {userId} = await auth();
@@ -31,9 +31,9 @@ export const upsertUserProgress = async(courseId:number)=>{
     }
 
 
-    // if(!course.units.length || !course.units[0].lessons.length){
-    //     throw new Error("Contenido vacio");
-    // }
+    if(!course.units.length || !course.units[0].lessons.length){
+        throw new Error("Contenido vacio");
+    }
 
     const existingUserProgress = await getUserProgress();
 
