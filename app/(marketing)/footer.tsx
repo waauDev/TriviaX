@@ -10,56 +10,34 @@ export const Footer = () =>{
                 
                 <Button size="lg" variant="ghost">
                     <Image
-                    src="/es.svg"
-                    alt="Español"
+                    src="/ciencia.gif"
+                    alt="Ciencia"
                     height={32}
                     width={40}
                     className="mr-4 rounded-md"
                     />
-                    Español
+                    Ciencia
                 </Button>
                 <Button size="lg" variant="ghost">
                     <Image
-                    src="/it.svg"
-                    alt="Italiano"
+                    src="/histo.gif"
+                    alt="Historia"
                     height={32}
                     width={40}
                     className="mr-4 rounded-md"
                     />
-                    Italiano
+                    Historia
                 </Button>
                 <Button size="lg" variant="ghost">
                     <Image
-                    src="hr.svg"
-                    alt="Croata"
+                    src="/geogra.gif"
+                    alt="geografia"
                     height={32}
                     width={40}
                     className="mr-4 rounded-md"
                     />
-                    Croata
+                    Geografía
                 </Button>
-                <Button size="lg" variant="ghost">
-                    <Image
-                    src="/fr.svg"
-                    alt="Frances"
-                    height={32}
-                    width={40}
-                    className="mr-4 rounded-md"
-                    />
-                    Frances
-                </Button>
-                <Button size="lg" variant="ghost" className="max-w-fit"
-                    >
-                    <Image
-                    src="/jp.svg"
-                    alt="Japanese"
-                    height={32}
-                    width={40}
-                    className="mr-4 rounded-md"
-                    />
-                    Japanese
-                </Button>
-
             </div>
         </footer> 
     )

@@ -25,18 +25,18 @@ const main = async()=>{
     await db.insert(schema.courses).values([
         {
             id:1,
-            title:"Ciencia",
-            imageSrc:"/roten.gif"
+            title:"Historia",
+            imageSrc:"/histo.gif"
         },
         {
             id:2,
-            title:"Español",
-            imageSrc:"/es.svg"
+            title:"Ciencia",
+            imageSrc:"/ciencia.gif"
         },
         {
             id:3,
-            title:"Frances",
-            imageSrc:"/fr.svg"
+            title:"Geografía",
+            imageSrc:"/geogra.gif"
         },
         
     ]
@@ -47,8 +47,26 @@ const main = async()=>{
         {
             id:1,
             courseId:1,
-            title:"Las ilogicas",
-            description:"Preguntas que no tienen logica",
+            title:"Sobre Colombia",
+            description:"Historia Nacional",
+            order:1,
+        }
+    ]);
+    await db.insert(schema.units).values([
+        {
+            id:2,
+            courseId:1,
+            title:"Sobre America",
+            description:"Hechos historicos ocurridos en el continente Americano",
+            order:1,
+        }
+    ]);
+    await db.insert(schema.units).values([
+        {
+            id:3,
+            courseId:1,
+            title:"Sobre Mundo",
+            description:"Hechos historicos ocurridos en el mundo",
             order:1,
         }
     ]);
@@ -58,13 +76,19 @@ const main = async()=>{
             id:1,
             unitId:1,
             order:1,
-            title:"Sobre la vida",
+            title:"Época Precolombina",
         },
         {
             id:2,
             unitId:1,
             order:1,
-            title:"Sobre animales",
+            title:"Época Colonial",
+        },
+        {
+            id:3,
+            unitId:1,
+            order:1,
+            title:"Época Republicana",
         },
     ])
 
@@ -72,9 +96,9 @@ const main = async()=>{
         {
             id:1,
             lessonId:1,
-            type:"SELECT",
+            type:"ASSIST",
             order:1,
-            question:"¿Existe el sentido de la vida o es solo una excusa elegante para procrastinar? 🛋️📚✨"
+            question:"¿Cuál de los siguientes pueblos indígenas habitó el altiplano cundiboyacense en la época precolombina?"
 
 
         },
@@ -83,7 +107,7 @@ const main = async()=>{
             lessonId:1,
             type:"ASSIST",
             order:1,
-            question:"¿Las vacas se preguntan por qué los humanos beben su leche? 🐄🥛🤨"
+            question:"¿Qué actividad económica era fundamental para los muiscas durante la época precolombina?"
 
 
         },
@@ -92,16 +116,16 @@ const main = async()=>{
             lessonId:1,
             type:"SELECT",
             order:1,
-            question:"2X4"
+            question:"¿En qué región de Colombia se desarrolló la cultura tairona?"
 
 
         },
         {
             id:4,
-            lessonId:2,
+            lessonId:1,
             type:"SELECT",
             order:1,
-            question:"Si tienes 5 panes y te comes 3, ¿qué tienes?"
+            question:"¿Cuál era una de las principales características de las viviendas muiscas?"
 
         }
     ])
@@ -110,99 +134,99 @@ const main = async()=>{
         {
             
             challengeId:1,
-            imageSrc:"/boy.svg",
-            correct:true,
-            text:"el Hombre",
-            audioSrc:"/es_man.mp3"
+            //imageSrc:"/boy.svg",
+            correct:false,
+            text:"Quimbayas",
+            //audioSrc:"/es_man.mp3"
         },
         {
             
             challengeId:1,
-            imageSrc:"/girl.svg",
+            //imageSrc:"/girl.svg",
             correct:false,
-            text:"la mujer",
-            audioSrc:"/es_woman.mp3"
+            text:"Taironas",
+            //audioSrc:"/es_woman.mp3"
         },
         {
             
             challengeId:1,
-            imageSrc:"/zombie.svg",
+            //imageSrc:"/zombie.svg",
+            correct:true,
+            text:"Muiscas",
+            //audioSrc:"/es_robot.mp3"
+        },
+        {
+            
+            challengeId:1,
             correct:false,
-            text:"el robot",
-            audioSrc:"/es_robot.mp3"
+            text:"Calimas",
+            //audioSrc:"/es_man.mp3"
+        },
+        {
+            
+            challengeId:2,
+            correct:false,
+            text:"🐄",
+            audioSrc:"/ganaderia.mp3"
         },
         {
             
             challengeId:2,
             correct:true,
-            text:"el Hombre",
-            audioSrc:"/es_man.mp3"
+            text:"🧂",
+            audioSrc:"/comercio_sal.mp3"
         },
         {
             
             challengeId:2,
             correct:false,
-            text:"la mujer",
-            audioSrc:"/es_woman.mp3"
+            text:"⛏️",
+            audioSrc:"/mineria_oro.mp3"
         },
         {
             
             challengeId:2,
             correct:false,
-            text:"el robot",
-            audioSrc:"/es_robot.mp3"
-        },
-        {
-            
-            challengeId:3,
-            correct:true,
-            text:"9",
-            audioSrc:"/es_man.mp3"
+            text:"🚣‍♂️",
+            audioSrc:"/navegacion_fluvial.mp3"
         },
         {
             
             challengeId:3,
             correct:false,
-            text:"40",
-            audioSrc:"/es_woman.mp3"
-        },
-        {
-            
-            challengeId:3,
-            correct:false,
-            text:"80",
-            audioSrc:"/es_robot.mp3"
+            text:"Si",
+           // audioSrc:"/es_robot.mp3"
         },
         {
             
             challengeId:3,
             correct:true,
             text:"No se",
-            audioSrc:"/es_robot.mp3"
+            //audioSrc:"/es_robot.mp3"
         },
         {
             
             challengeId:4,
             correct:false,
-            text:"Hambre aún 🍞😩"
+            text:"Prueba 1"
         },
         {
             
             challengeId:4,
             correct:false,
-            text:"Problemas de autocontrol 🤤"
+            text:"Prueba 2"
         },
         {
             
             challengeId:4,
             correct:true,
-            text:"2 panes 🍞🍞"
+            text:"Prueba 3"
         },
         {
             
             challengeId:4,
             correct:false,
-            text:"Ganas de una siesta 😴"
+            text:"Prueba 4"
         },
         
     
