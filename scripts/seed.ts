@@ -130,6 +130,40 @@ const main = async()=>{
         }
     ])
 
+    
+    await db.insert(schema.challenges).values([
+        {
+            id:5,
+            lessonId:2,
+            type:"ASSIST",
+            order:1,
+            question:"¿Cuál fue uno de los principales objetivos de la colonización española en el territorio que hoy es Colombia?"
+
+
+        },
+        {
+            id:6,
+            lessonId:2,
+            type:"ASSIST",
+            order:1,
+            question:"¿Cuál fue una de las principales consecuencias de la colonización para los pueblos indígenas en Colombia?"
+ 
+        },
+        {
+            id:7,
+            lessonId:2,
+            type:"ASSIST",
+            order:1,
+            question:"¿Qué institución se encargaba de la educación y evangelización durante la colonia en Colombia?"
+ 
+        }
+        
+
+        
+    ])
+
+    
+
     await db.insert(schema.challengeOptions).values([
         {
             
@@ -231,6 +265,77 @@ const main = async()=>{
         
     
     ])
+
+    await db.insert(schema.challengeOptions).values([
+        {
+            
+            challengeId:5,
+            //imageSrc:"/boy.svg",
+            correct:false,
+            text:"Fomentar la democracia local",
+            //audioSrc:"/es_man.mp3"
+        },
+        {
+            
+            challengeId:5,
+            //imageSrc:"/boy.svg",
+            correct:false,
+            text:"Explorar el Amazonas",
+            //audioSrc:"/es_man.mp3"
+        },
+        {
+            
+            challengeId:5,
+            //imageSrc:"/boy.svg",
+            correct:true,
+            text:"Obtener riquezas como el oro y evangelizar a los indígenas ",
+            //audioSrc:"/es_man.mp3"
+        },
+        {
+            
+            challengeId:5,
+            //imageSrc:"/boy.svg",
+            correct:false,
+            text:"Establecer relaciones comerciales con África",
+            //audioSrc:"/es_man.mp3"
+        },
+    ])
+
+    await db.insert(schema.challengeOptions).values([
+        {
+            
+            challengeId:6,
+            //imageSrc:"/boy.svg",
+            correct:false,
+            text:"Incremento de su autonomía",
+            //audioSrc:"/es_man.mp3"
+        },
+        {
+            
+            challengeId:6,
+            //imageSrc:"/boy.svg",
+            correct:false,
+            text:"Mejora en su calidad de vida",
+            //audioSrc:"/es_man.mp3"
+        },
+        {
+            
+            challengeId:6,
+            //imageSrc:"/boy.svg",
+            correct:true,
+            text:"Acceso a nuevas tecnologías",
+            //audioSrc:"/es_man.mp3"
+        },
+        {
+            
+            challengeId:6,
+            //imageSrc:"/boy.svg",
+            correct:true,
+            text:"Pérdida de sus tierras y culturas",
+            //audioSrc:"/es_man.mp3"
+        },
+    ])
+
 
 
     console.log("Finish  Seeding database");
