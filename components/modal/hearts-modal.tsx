@@ -14,7 +14,7 @@ import {Dialog,
 import { Button } from "../ui/button"
 import { useHeartsModal } from "@/store/use-hearts-modal"
 import { useRouter } from "next/navigation"
-import { use, useEffect, useState } from "react"
+import {  useEffect, useState } from "react"
 
 
 export const HeartsModal=()=>{

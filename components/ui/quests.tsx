@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Button } from "./button"
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 type Props ={
     points:number;
 }

@@ -13,12 +13,11 @@ import {Dialog,
 
 import { Button } from "../ui/button"
 import { usePracticeModal } from "@/store/use-practice-modal"
-import { useRouter } from "next/navigation"
-import { use, useEffect, useState } from "react"
+import {  useEffect, useState } from "react"
 
 
 export const PracticeModal=()=>{
-    const router = useRouter();
+    
     const [isClient, setIsClient] =useState(false);
     const {isOpen, close} = usePracticeModal(); 
 

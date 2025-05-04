@@ -1,11 +1,11 @@
 import { UserProgress } from "@/components/user-progress";
 import { StickyWrapper } from "@/components/sticky-wrapper";
-import { getTopTenUsers, getUserProgress, getUserSubscription } from "@/db/query";
+import {  getUserProgress, getUserSubscription } from "@/db/query";
 
 import { redirect } from "next/navigation";
 import Image from "next/image";
 
-import { Separator } from "@/components/ui/separator";
+
 import { FeedWrapper } from "@/components/feed-wrapper";
 import { Progress } from "@/components/ui/progress";
 import {quests} from "@/const";

@@ -24,7 +24,7 @@ type Props ={
         completed:boolean;
         challengeOptions: typeof challengeOptions.$inferSelect[];
     })[];
-    userSubscription:any;
+    userSubscription:unknown;
 }
 
 export const Quiz = ({
@@ -50,8 +50,10 @@ export const Quiz = ({
 
     const [finishAudio] = useAudio({src:"/final.wav", autoPlay:true})
 
+    
     const [
         correctAudio,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         _c,
         correctControls,
 
@@ -59,6 +61,7 @@ export const Quiz = ({
 
     const [
         incorrectAudio,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         _i,
         incorrectControls,
 

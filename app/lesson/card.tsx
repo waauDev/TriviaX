@@ -18,7 +18,6 @@ type Props = {
 };
 
 export const Card = ({
-    id,
     imageSrc,
     audioSrc,
     text,
@@ -30,6 +29,7 @@ export const Card = ({
     type,
 
 }:Props) =>{
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [audio, _, controls] = useAudio({src:audioSrc || " "})
 
     const handleClick = useCallback(()=>{
@@ -37,7 +37,7 @@ export const Card = ({
         controls.play();
 
         onClick();
-    },[disabled,onClick]);
+    },[disabled,onClick, controls]);
 
     useKey(shortcut, handleClick,{},[handleClick]);
     return(

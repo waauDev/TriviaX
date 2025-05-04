@@ -1,12 +1,13 @@
 import {auth} from "@clerk/nextjs/server"
 
 const adminIds = [
-    "user_2uWLWHsQpHhRdd206jdisty2FPH",
+    // triviaX : user_2w4NhigRaAtULAYVmQOVbIFkX6v
+    "user_2uWLWHsQpHhRdd206jdisty2FPH_123",
     "user_2w4NhigRaAtULAYVmQOVbIFkX6v"
 ]
 
-export const isAdmin = async()=>{
-    const {userId} = await auth()
+export const isAdmin = async ()=>{
+    const {userId} = await auth();
     
 
     if(!userId){

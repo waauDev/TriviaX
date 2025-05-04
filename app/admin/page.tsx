@@ -7,7 +7,7 @@ const App = dynamic(()=> import("./app"), {ssr:!!false});
 
 const AdminPage =  ()=>{
 
-     if(!isAdmin){
+     if(!isAdmin()){
         redirect("/");
      }
      
