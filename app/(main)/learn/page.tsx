@@ -9,6 +9,7 @@ import { Promo } from "@/components/promo";
 import { Quests } from "@/components/ui/quests";
 
 
+
 const LearnPage = async() => {
 
   const userProgressData= getUserProgress();
@@ -18,18 +19,19 @@ const LearnPage = async() => {
   const lessonPercentageData = getlessonPercentage();
   
   
+  
 
   const[
     userProgress,
     units,
     courseProgress,
-    lessonPercentage
+    lessonPercentage,
 
   ]= await Promise.all(
     [
       userProgressData,unitsData,  courseProgressData, lessonPercentageData,
     ])
-  
+
   if(!userProgress|| !userProgress.activeCourse){
     redirect("/courses");
   }

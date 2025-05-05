@@ -16,7 +16,7 @@ export const Header = () =>{
             <div className="lg:max-w-screen-lg max-auto flex items-center justify-between h-full ">
                 <div className="pt-8 pl-4 pb-7 flex items-center gap-x-3">
                     <Image src="/think.svg" height={75} width={75} alt="mascot"></Image>
-                    <h1 className="text-2xl font-extrabold text-green-600 tracking-wide">
+                    <h1 className="text-2xl font-extrabold text-indigo-500 tracking-wide">
                         TriviaX
                     </h1>
                 </div>

@@ -63,7 +63,7 @@ export default function Home(){
                   forceRedirectUrl="/learn"
                   signInForceRedirectUrl ="/learn"
             >
-              <Button size="lg" variant="secondary" className="w-full">Registrate</Button>
+              <Button size="lg" variant="super" className="w-full">Registrate</Button>
 
             </SignUpButton>
             <SignInButton mode="modal"
@@ -76,7 +76,7 @@ export default function Home(){
 
           </SignedOut>
           <SignedIn>
-            <Button size="lg" variant="secondary" className="w-full" asChild>
+            <Button size="lg" variant="super" className="w-full" asChild>
               <Link href="/learn">
                 Continua Jugando
               </Link>
