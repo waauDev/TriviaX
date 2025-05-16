@@ -10,6 +10,7 @@ import { Quests } from "@/components/ui/quests";
 
 
 
+
 const LearnPage = async() => {
 
   const userProgressData= getUserProgress();
@@ -31,7 +32,8 @@ const LearnPage = async() => {
     [
       userProgressData,unitsData,  courseProgressData, lessonPercentageData,
     ])
-
+  
+  
   if(!userProgress|| !userProgress.activeCourse){
     redirect("/courses");
   }
