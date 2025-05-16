@@ -7,6 +7,7 @@ import { getCourseProgress, getlessonPercentage, getUnits, getUserProgress } fro
 import { Unit } from "./unit";
 import { Promo } from "@/components/promo";
 import { Quests } from "@/components/ui/quests";
+import { Manual } from "@/components/ui/manual";
 
 
 
@@ -55,6 +56,7 @@ const LearnPage = async() => {
         </UserProgress>
         <Promo />
         <Quests/>
+        <Manual/>
       </StickyWrapper>
       <FeedWrapper>
           <Header title={userProgress?.activeCourse?.title}/>
